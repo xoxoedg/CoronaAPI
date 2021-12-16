@@ -1,4 +1,4 @@
-package rug.coronaApi.CoronaTracking.Countries.GermanyData;
+package rug.coronaApi.CoronaTracking.Countries.GermanyData.germanydataapimapping;
 
 
 

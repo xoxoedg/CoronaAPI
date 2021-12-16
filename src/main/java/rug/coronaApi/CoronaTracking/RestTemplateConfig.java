@@ -1,4 +1,4 @@
-package rug.coronaApi.CoronaTracking.Countries.GermanyData;
+package rug.coronaApi.CoronaTracking;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
