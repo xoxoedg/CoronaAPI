@@ -1,0 +1,114 @@
+{
+  "Baden-Wurttemberg": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 12447,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Bayern": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 18851,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Berlin": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 3938,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Brandenburg": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 4408,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Bremen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 575,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Hamburg": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 1940,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Hessen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 8374,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Mecklenburg-Vorpommern": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 1404,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Niedersachsen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 6633,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Nordrhein-Westfalen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 19690,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Rheinland-Pfalz": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 4452,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Saarland": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 1178,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Sachsen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 11971,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Sachsen-Anhalt": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 4027,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Schleswig-Holstein": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 1850,
+    "updated": "2021-12-16 04:22:11"
+  },
+  "Thuringen": {
+    "name": "Whatever",
+    "confirmed": true,
+    "recovered": 0,
+    "deaths": 5469,
+    "updated": "2021-12-16 04:22:11"
+  }
+}
