@@ -7,7 +7,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,58 +17,58 @@ public class GermanyCasesEntity {
     private Long id;
     @Column(name = "Bundesland")
     private String bundeslandName;
-    private BigInteger recovered;
-    private BigInteger deaths;
-    private BigInteger confirmed;
-    private LocalDateTime updated;
+    private Long recovered;
+    private Long deaths;
+    private Long confirmed;
+    private LocalDateTime casesUpdatedDate;
     @CreationTimestamp
     private LocalDateTime createdDate;
     @UpdateTimestamp
     private LocalDateTime updatedDate;
 
 
-    public GermanyCasesEntity(String bundeslandName, BigInteger recovered, BigInteger deaths, BigInteger confirmed, LocalDateTime updated) {
+    public GermanyCasesEntity(String bundeslandName, Long recovered, Long deaths, Long confirmed, LocalDateTime casesUpdatedDate) {
         this.bundeslandName = bundeslandName;
         this.recovered = recovered;
         this.deaths = deaths;
         this.confirmed = confirmed;
-        this.updated = updated;
+        this.casesUpdatedDate = casesUpdatedDate;
     }
 
     static class Builder {
         private String bundeslandName;
-        private BigInteger recovered;
-        private BigInteger deaths;
-        private BigInteger confirmed;
-        private LocalDateTime casesUpdated;
+        private Long recovered;
+        private Long deaths;
+        private Long confirmed;
+        private LocalDateTime casesUpdatedDate;
 
         public Builder bundeslandName(String name) {
             this.bundeslandName = name;
             return this;
         }
 
-        public Builder recovered(BigInteger recovered) {
+        public Builder recovered(Long recovered) {
             this.recovered = recovered;
             return this;
         }
 
-        public Builder deaths(BigInteger deaths) {
+        public Builder deaths(Long deaths) {
             this.deaths = deaths;
             return this;
         }
 
-        public Builder confirmed(BigInteger confirmed) {
+        public Builder confirmed(Long confirmed) {
             this.confirmed = confirmed;
             return this;
         }
 
         public Builder casesUpdated(LocalDateTime time) {
-            this.casesUpdated = time;
+            this.casesUpdatedDate = time;
             return this;
         }
 
         public GermanyCasesEntity build() {
-            return new GermanyCasesEntity(bundeslandName, recovered, deaths, confirmed, casesUpdated);
+            return new GermanyCasesEntity(bundeslandName, recovered, deaths, confirmed, casesUpdatedDate);
         }
 
     }
