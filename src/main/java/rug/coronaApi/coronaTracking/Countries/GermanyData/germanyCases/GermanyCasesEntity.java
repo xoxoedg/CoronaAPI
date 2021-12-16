@@ -1,14 +1,12 @@
-package rug.coronaApi.CoronaTracking.Countries.GermanyData;
+package rug.coronaApi.coronaTracking.Countries.GermanyData.germanyCases;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Table(name = "Germany_Cases")
 @Entity
 public class GermanyCasesEntity {
 

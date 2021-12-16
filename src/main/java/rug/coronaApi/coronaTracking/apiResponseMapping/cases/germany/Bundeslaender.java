@@ -1,4 +1,4 @@
-package rug.coronaApi.CoronaTracking.Countries.GermanyData.germanydataapimapping;
+package rug.coronaApi.coronaTracking.apiResponseMapping.cases.germany;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

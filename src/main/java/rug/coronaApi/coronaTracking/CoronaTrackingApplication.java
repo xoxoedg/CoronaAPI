@@ -1,4 +1,4 @@
-package rug.coronaApi.CoronaTracking;
+package rug.coronaApi.coronaTracking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

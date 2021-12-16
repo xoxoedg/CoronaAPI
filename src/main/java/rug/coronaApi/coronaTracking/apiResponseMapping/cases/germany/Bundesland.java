@@ -1,9 +1,8 @@
-package rug.coronaApi.CoronaTracking.Countries.GermanyData.germanydataapimapping;
+package rug.coronaApi.coronaTracking.apiResponseMapping.cases.germany;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.math.BigInteger;
