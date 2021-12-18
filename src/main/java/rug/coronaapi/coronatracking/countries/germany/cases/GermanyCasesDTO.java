@@ -30,7 +30,7 @@ public class GermanyCasesDTO {
             return this;
         }
 
-        public Builder name(Long recovered) {
+        public Builder recovered(Long recovered) {
             this.recovered = recovered;
             return this;
         }
@@ -48,8 +48,5 @@ public class GermanyCasesDTO {
         public GermanyCasesDTO build() {
             return new GermanyCasesDTO(bundeslandName, recovered, confirmed, casesUpdatedDate);
         }
-
     }
-
-
 }
