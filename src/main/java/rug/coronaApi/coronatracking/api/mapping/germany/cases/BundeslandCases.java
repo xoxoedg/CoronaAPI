@@ -1,4 +1,4 @@
-package rug.coronaApi.coronatracking.api.response.mapping.cases.germany;
+package rug.coronaApi.coronatracking.api.mapping.germany.cases;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown=true)
-public abstract class Bundesland implements Serializable {
+public abstract class BundeslandCases implements Serializable {
         protected BigInteger confirmed;
         protected BigInteger recovered;
         protected BigInteger deaths;

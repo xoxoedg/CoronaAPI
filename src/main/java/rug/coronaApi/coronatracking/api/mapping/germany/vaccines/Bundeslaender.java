@@ -1,4 +1,4 @@
-package rug.coronaApi.coronatracking.api.response.mapping.cases.germany;
+package rug.coronaApi.coronatracking.api.mapping.germany.vaccines;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,9 +7,9 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-@Getter
 @Setter
-@JsonIgnoreProperties(ignoreUnknown=true)
+@Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Bundeslaender implements Serializable {
     @JsonProperty("Baden-Wurttemberg")
     public BadenWurttemberg badenWurttemberg;
@@ -44,3 +44,4 @@ public class Bundeslaender implements Serializable {
     @JsonProperty("Thuringen")
     public Thuringen thuringen;
 }
+

@@ -1,0 +1,98 @@
+{
+  "Baden-Wurttemberg": {
+    "administered": 18295519,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Bayern": {
+    "administered": 21834984,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Berlin": {
+    "administered": 6373672,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Brandenburg": {
+    "administered": 3841214,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Bremen": {
+    "administered": 1295561,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Hamburg": {
+    "administered": 3219754,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Hessen": {
+    "administered": 10379957,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Mecklenburg-Vorpommern": {
+    "administered": 2642828,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Niedersachsen": {
+    "administered": 13887402,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Nordrhein-Westfalen": {
+    "administered": 32091432,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Rheinland-Pfalz": {
+    "administered": 6991895,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Saarland": {
+    "administered": 1834154,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Sachsen": {
+    "administered": 5826430,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Sachsen-Anhalt": {
+    "administered": 3448022,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Schleswig-Holstein": {
+    "administered": 5226713,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  },
+  "Thuringen": {
+    "administered": 3268400,
+    "people_vaccinated": 0,
+    "people_partially_vaccinated": 0,
+    "updated": "2021/12/18 00:00:00+00"
+  }
+}
