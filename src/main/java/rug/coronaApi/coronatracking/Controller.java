@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import rug.coronaApi.coronatracking.api.mapping.germany.cases.Bundeslaender;
+import rug.coronaApi.coronatracking.countries.germany.cases.mapping.Bundeslaender;
 
 @RestController
 public class Controller {
