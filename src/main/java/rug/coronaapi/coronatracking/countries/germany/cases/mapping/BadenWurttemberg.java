@@ -1,4 +1,4 @@
-package rug.coronaApi.coronatracking.countries.germany.cases.mapping;
+package rug.coronaapi.coronatracking.countries.germany.cases.mapping;
 
 
 

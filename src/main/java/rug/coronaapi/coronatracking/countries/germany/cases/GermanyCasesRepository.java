@@ -1,4 +1,4 @@
-package rug.coronaApi.coronatracking.countries.germany.cases;
+package rug.coronaapi.coronatracking.countries.germany.cases;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
