@@ -5,28 +5,29 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class GermanyCasesDTO {
+public class BundeslandCasesDTO {
 
     private String bundeslandName;
     private Long recovered;
     private Long confirmed;
-    private LocalDateTime casesUpdatedDate;
+    private LocalDate casesUpdatedDate;
 
 
     public static class Builder {
-        private String bundeslandName;
+        private String name;
         private Long recovered;
         private Long confirmed;
-        private LocalDateTime casesUpdatedDate;
+        private LocalDate casesUpdatedDate;
 
 
         public Builder name(String name) {
-            this.bundeslandName = name;
+            this.name = name;
             return this;
         }
 
@@ -40,13 +41,13 @@ public class GermanyCasesDTO {
             return this;
         }
 
-        public Builder date(LocalDateTime dateTime) {
+        public Builder date(LocalDate dateTime) {
             this.casesUpdatedDate = dateTime;
             return this;
         }
 
-        public GermanyCasesDTO build() {
-            return new GermanyCasesDTO(bundeslandName, recovered, confirmed, casesUpdatedDate);
+        public BundeslandCasesDTO build() {
+            return new BundeslandCasesDTO(name, recovered, confirmed, casesUpdatedDate);
         }
     }
 }

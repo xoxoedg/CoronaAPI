@@ -1,0 +1,92 @@
+[
+  {
+    "bundeslandName": "Bayern",
+    "recovered": 0,
+    "confirmed": 1271825,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Baden Württemberg",
+    "recovered": 0,
+    "confirmed": 965568,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Berlin",
+    "recovered": 0,
+    "confirmed": 306777,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Brandenburg",
+    "recovered": 0,
+    "confirmed": 220315,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Bremen",
+    "recovered": 0,
+    "confirmed": 43860,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Hamburg",
+    "recovered": 0,
+    "confirmed": 127359,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Hessen",
+    "recovered": 0,
+    "confirmed": 454470,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Mecklenburg Vorpommern",
+    "recovered": 0,
+    "confirmed": 90290,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Niedersachsen",
+    "recovered": 0,
+    "confirmed": 417336,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Nordrhein Westfalen",
+    "recovered": 0,
+    "confirmed": 1305832,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Saarland",
+    "recovered": 0,
+    "confirmed": 70019,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Sachsen",
+    "recovered": 0,
+    "confirmed": 616372,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Sachsen Anhalt",
+    "recovered": 0,
+    "confirmed": 208469,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Schleswig Holstein",
+    "recovered": 0,
+    "confirmed": 108261,
+    "casesUpdatedDate": "2021-12-18"
+  },
+  {
+    "bundeslandName": "Thüringen",
+    "recovered": 0,
+    "confirmed": 265134,
+    "casesUpdatedDate": "2021-12-18"
+  }
+]

@@ -6,15 +6,13 @@ import rug.coronaapi.coronatracking.countries.germany.cases.mapping.BundeslandCa
 @Component
 public class GermanyApiToEntityConverter {
 
-    public   GermanyCasesEntity convertToEntity(BundeslandCases bundesland) {
+    public GermanyCasesEntity convertToEntity(BundeslandCases bundesland) {
         return new GermanyCasesEntity.Builder()
                 .bundeslandName(bundesland.getName())
                 .confirmed(bundesland.getConfirmed())
                 .deaths(bundesland.getDeaths())
                 .recovered(bundesland.getRecovered())
-                .casesUpdated(bundesland.getUpdated())
+                .casesUpdated(bundesland.getUpdated().toLocalDate())
                 .build();
-
-
     }
 }

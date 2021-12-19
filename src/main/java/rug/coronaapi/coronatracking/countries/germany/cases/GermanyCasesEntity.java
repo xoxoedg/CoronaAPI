@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -20,7 +21,7 @@ public class GermanyCasesEntity {
     private Long recovered;
     private Long deaths;
     private Long confirmed;
-    private LocalDateTime casesUpdatedDate;
+    private LocalDate casesUpdatedDate;
     @CreationTimestamp
     private LocalDateTime createdDate;
     @UpdateTimestamp
@@ -29,7 +30,7 @@ public class GermanyCasesEntity {
     public GermanyCasesEntity() {
     }
 
-    public GermanyCasesEntity(String bundeslandName, Long recovered, Long deaths, Long confirmed, LocalDateTime casesUpdatedDate) {
+    public GermanyCasesEntity(String bundeslandName, Long recovered, Long deaths, Long confirmed, LocalDate casesUpdatedDate) {
         this.bundeslandName = bundeslandName;
         this.recovered = recovered;
         this.deaths = deaths;
@@ -42,7 +43,7 @@ public class GermanyCasesEntity {
         private Long recovered;
         private Long deaths;
         private Long confirmed;
-        private LocalDateTime casesUpdatedDate;
+        private LocalDate casesUpdatedDate;
 
         public Builder bundeslandName(String name) {
             this.bundeslandName = name;
@@ -64,7 +65,7 @@ public class GermanyCasesEntity {
             return this;
         }
 
-        public Builder casesUpdated(LocalDateTime time) {
+        public Builder casesUpdated(LocalDate time) {
             this.casesUpdatedDate = time;
             return this;
         }
