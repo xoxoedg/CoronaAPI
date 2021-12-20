@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface GermanyCasesRepository extends JpaRepository<GermanyCasesEntity, Long> {
-
+    
     List<GermanyCasesEntity> findByCasesUpdatedDate(LocalDate casesUpdatedDate);
 
     List<GermanyCasesEntity> findByBundeslandName(String bundeslandName);

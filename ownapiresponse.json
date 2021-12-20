@@ -2,91 +2,91 @@
   {
     "bundeslandName": "Bayern",
     "recovered": 0,
-    "confirmed": 1271825,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 1281634,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Baden Württemberg",
     "recovered": 0,
-    "confirmed": 965568,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 970100,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Berlin",
     "recovered": 0,
-    "confirmed": 306777,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 309476,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Brandenburg",
     "recovered": 0,
-    "confirmed": 220315,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 224296,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Bremen",
     "recovered": 0,
-    "confirmed": 43860,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 44059,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Hamburg",
     "recovered": 0,
-    "confirmed": 127359,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 128267,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Hessen",
     "recovered": 0,
-    "confirmed": 454470,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 457945,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Mecklenburg Vorpommern",
     "recovered": 0,
-    "confirmed": 90290,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 92303,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Niedersachsen",
     "recovered": 0,
-    "confirmed": 417336,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 421328,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Nordrhein Westfalen",
     "recovered": 0,
-    "confirmed": 1305832,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 1317705,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Saarland",
     "recovered": 0,
-    "confirmed": 70019,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 70850,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Sachsen",
     "recovered": 0,
-    "confirmed": 616372,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 619747,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Sachsen Anhalt",
     "recovered": 0,
-    "confirmed": 208469,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 209970,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Schleswig Holstein",
     "recovered": 0,
-    "confirmed": 108261,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 109611,
+    "casesUpdatedDate": "2021-12-19"
   },
   {
     "bundeslandName": "Thüringen",
     "recovered": 0,
-    "confirmed": 265134,
-    "casesUpdatedDate": "2021-12-18"
+    "confirmed": 269843,
+    "casesUpdatedDate": "2021-12-19"
   }
 ]

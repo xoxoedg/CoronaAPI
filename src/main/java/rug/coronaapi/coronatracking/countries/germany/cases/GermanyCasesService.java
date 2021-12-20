@@ -24,32 +24,22 @@ public class GermanyCasesService {
     }
 
     public void saveTodayCases() {
-        if (findGermanyCasesToday() == null) {
+        if (repository.findByCasesUpdatedDate(LocalDate.now()) == null) {
             Bundeslaender germanyCases = requestService.getGermanyCases();
-            List<GermanyCasesEntity> germanyCasesEntities = List.of(converter.convertToEntity(germanyCases.getBayern()), converter.convertToEntity(germanyCases.getBadenWurttemberg()), converter.convertToEntity(germanyCases.getBerlin()),
-                    converter.convertToEntity(germanyCases.getBrandenburg()), converter.convertToEntity(germanyCases.getBremen()),
-                    converter.convertToEntity(germanyCases.getHamburg()), converter.convertToEntity(germanyCases.getHessen()),
-                    converter.convertToEntity(germanyCases.getMecklenburgVorpommern()), converter.convertToEntity(germanyCases.getNiedersachsen()),
-                    converter.convertToEntity(germanyCases.getNordrheinWestfalen()), converter.convertToEntity(germanyCases.getSaarland()),
-                    converter.convertToEntity(germanyCases.getSachsen()), converter.convertToEntity(germanyCases.getSachsenAnhalt()),
-                    converter.convertToEntity(germanyCases.getSchleswigHolstein()), converter.convertToEntity(germanyCases.getThuringen()));
+            repository.saveAll(converter.covertAllToEntity(germanyCases));
 
-            germanyCasesEntities.forEach(repository::save);
+
         }
-        log.info("Cases already in Database");
+        else log.info("Cases already in Database");
     }
 
-    public List<BundeslandCasesDTO> findGermanyCasesToday() {
-        List<BundeslandCasesDTO> bundeslandCasesDTO = new ArrayList<>();
-        repository.findByCasesUpdatedDate(LocalDate.of(2021, 12, 18)).forEach(entity -> bundeslandCasesDTO.add(GermanyEntityToDTOConverter.convertToDTO(entity)));
+    public List<BundeslandCasesDto> findGermanyCasesToday() {
+        List<BundeslandCasesDto> bundeslandCasesDTO = new ArrayList<>();
+        repository.findByCasesUpdatedDate(LocalDate.of(2021, 12, 19)).forEach(entity -> bundeslandCasesDTO.add(GermanyEntityToDtoConverter.convertToDTO(entity)));
         return bundeslandCasesDTO;
     }
 
-    public List<BundeslandCasesDTO> findCaseByBundesland(String name) {
-        List<BundeslandCasesDTO> bundeslandCasesDTOS = new ArrayList<>();
-        repository.findByBundeslandName(name).forEach(entity -> bundeslandCasesDTOS.add(GermanyEntityToDTOConverter.convertToDTO(entity)));
-        return bundeslandCasesDTOS;
+    public List<BundeslandCasesDto> findCaseByBundesland(String name) {
+        return GermanyEntityToDtoConverter.covertAllToDto(repository.findByBundeslandName(name));
     }
-
-
 }

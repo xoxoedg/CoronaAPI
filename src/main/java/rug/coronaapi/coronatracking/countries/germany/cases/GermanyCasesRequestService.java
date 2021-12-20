@@ -13,10 +13,9 @@ public class GermanyCasesRequestService {
         this.restTemplate = restTemplate;
     }
 
+    //ApiResponseHandler
     public Bundeslaender getGermanyCases() {
         return restTemplate.getForObject("https://covid-api.mmediagroup.fr/v1/cases?country=Germany",
                 Bundeslaender.class);
-
     }
-
 }

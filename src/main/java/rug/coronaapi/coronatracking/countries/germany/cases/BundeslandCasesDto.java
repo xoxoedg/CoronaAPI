@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter
 @Setter
-public class BundeslandCasesDTO {
+public class BundeslandCasesDto {
 
     private String bundeslandName;
     private Long recovered;
@@ -46,8 +46,8 @@ public class BundeslandCasesDTO {
             return this;
         }
 
-        public BundeslandCasesDTO build() {
-            return new BundeslandCasesDTO(name, recovered, confirmed, casesUpdatedDate);
+        public BundeslandCasesDto build() {
+            return new BundeslandCasesDto(name, recovered, confirmed, casesUpdatedDate);
         }
     }
 }
