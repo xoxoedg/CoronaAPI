@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class GermanyApiToEntityConverter {
 
-    public GermanyCasesEntity convertToEntity(BundeslandCases bundesland) {
+    public static GermanyCasesEntity convertToEntity(BundeslandCases bundesland) {
         return new GermanyCasesEntity.Builder()
                 .bundeslandName(bundesland.getName())
                 .confirmed(bundesland.getConfirmed())
@@ -19,7 +19,7 @@ public class GermanyApiToEntityConverter {
                 .build();
     }
 
-    public List<GermanyCasesEntity> covertAllToEntity(Bundeslaender germanyCases) {
+    public static List<GermanyCasesEntity> covertAllToEntity(Bundeslaender germanyCases) {
         return List.of(convertToEntity(germanyCases.getBayern()),
         convertToEntity(germanyCases.getBadenWurttemberg()), convertToEntity(germanyCases.getBerlin()),
         convertToEntity(germanyCases.getBrandenburg()), convertToEntity(germanyCases.getBremen()),

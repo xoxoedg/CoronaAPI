@@ -1,6 +1,8 @@
 package rug.coronaapi.coronatracking.countries.germany;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,10 +25,10 @@ public class GermanyController {
 
 
     @GetMapping("/germany")
-    public List<BundeslandCasesDto> getAllCases() {
+    public ResponseEntity<List<BundeslandCasesDto>> getAllCases() {
         casesService.saveTodayCases();
         casesService.findGermanyCasesToday().forEach(x -> System.out.println(x.toString()));
-        return casesService.findGermanyCasesToday();
+        return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
     @GetMapping("/germany/")

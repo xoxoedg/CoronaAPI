@@ -12,13 +12,11 @@ import java.util.List;
 @Service
 public class GermanyCasesService {
 
-    private final GermanyApiToEntityConverter converter;
     private final GermanyCasesRepository repository;
     private final GermanyCasesRequestService requestService;
 
-    public GermanyCasesService(GermanyApiToEntityConverter converter, GermanyCasesRepository repository,
+    public GermanyCasesService(GermanyCasesRepository repository,
                                GermanyCasesRequestService requestService) {
-        this.converter = converter;
         this.repository = repository;
         this.requestService = requestService;
     }
@@ -26,17 +24,13 @@ public class GermanyCasesService {
     public void saveTodayCases() {
         if (repository.findByCasesUpdatedDate(LocalDate.now()) == null) {
             Bundeslaender germanyCases = requestService.getGermanyCases();
-            repository.saveAll(converter.covertAllToEntity(germanyCases));
+            repository.saveAll(GermanyApiToEntityConverter.covertAllToEntity(germanyCases));
 
-
-        }
-        else log.info("Cases already in Database");
+        } else log.info("Cases already in Database");
     }
 
     public List<BundeslandCasesDto> findGermanyCasesToday() {
-        List<BundeslandCasesDto> bundeslandCasesDTO = new ArrayList<>();
-        repository.findByCasesUpdatedDate(LocalDate.of(2021, 12, 19)).forEach(entity -> bundeslandCasesDTO.add(GermanyEntityToDtoConverter.convertToDTO(entity)));
-        return bundeslandCasesDTO;
+        return GermanyEntityToDtoConverter.covertAllToDto(repository.findByCasesUpdatedDate(LocalDate.now()));
     }
 
     public List<BundeslandCasesDto> findCaseByBundesland(String name) {
