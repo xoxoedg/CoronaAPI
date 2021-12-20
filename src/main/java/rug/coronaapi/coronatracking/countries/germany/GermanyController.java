@@ -26,14 +26,13 @@ public class GermanyController {
 
     @GetMapping("/germany")
     public ResponseEntity<List<BundeslandCasesDto>> getAllCases() {
-        casesService.saveTodayCases();
-        casesService.findGermanyCasesToday().forEach(x -> System.out.println(x.toString()));
+        casesService.saveTodayCases(); // probably in the service
         return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
-    @GetMapping("/germany/")
-    public BundeslandCasesDto getTodayCasesByBundesland(@RequestParam(name = "name") String bundesland) {
-        return new BundeslandCasesDto();
+    @GetMapping("/germany")
+    public ResponseEntity<List<BundeslandCasesDto>> getTodayCasesByBundesland(@RequestParam(name = "name") String bundesland) {
+        return new ResponseEntity<List<BundeslandCasesDto>>(casesService.findCaseByBundesland(bundesland), HttpStatus.OK);
     }
 
 
