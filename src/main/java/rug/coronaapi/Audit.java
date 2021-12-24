@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-public class Audit {
+public abstract class Audit {
 
     @CreationTimestamp
     private LocalDateTime createdDate;
