@@ -10,19 +10,19 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DataJpaTest
 class GermanyCasesRepositoryTest {
 
     @Autowired
     private GermanyCasesRepository germanyCasesRepository;
-    private GermanyCasesEntity entity;
 
 
     @BeforeEach
     void setUp() {
-        entity = new GermanyCasesEntity.Builder()
+        GermanyCasesEntity entity = new GermanyCasesEntity.Builder()
                 .bundeslandName("Bayer")
                 .deaths(12L)
                 .casesUpdated(LocalDate.now())
@@ -49,9 +49,7 @@ class GermanyCasesRepositoryTest {
     void findByBundeslandName() {
         List<GermanyCasesEntity> actualBundesland = germanyCasesRepository.findByBundeslandName("Bayer");
         assertEquals(1, actualBundesland.size());
-
     }
-
 
     @Test
     void findByCasesUpdatedDateAndBundeslandName() {

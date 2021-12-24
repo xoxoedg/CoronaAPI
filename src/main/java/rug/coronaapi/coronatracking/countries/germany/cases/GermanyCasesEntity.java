@@ -1,31 +1,30 @@
 package rug.coronaapi.coronatracking.countries.germany.cases;
 
 import lombok.Getter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import rug.coronaapi.Audit;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Getter
-@Table(name = "Germany_Cases")
+@Table(name = "Germany_Cases", uniqueConstraints = {@UniqueConstraint(columnNames = {"Bundesland", "LastUpdated"})})
 @Entity
-public class GermanyCasesEntity {
+public class GermanyCasesEntity extends Audit {
 
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "Bundesland")
+    @Column(name = "Bundesland", nullable = false)
     private String bundeslandName;
+    @Column(nullable = false)
     private Long recovered;
+    @Column(nullable = false)
     private Long deaths;
+    @Column(nullable = false)
     private Long confirmed;
+    @Column(name = "LastUpdated", nullable = false)
     private LocalDate casesUpdatedDate;
-    @CreationTimestamp
-    private LocalDateTime createdDate;
-    @UpdateTimestamp
-    private LocalDateTime updatedDate;
+
 
     public GermanyCasesEntity() {
     }
