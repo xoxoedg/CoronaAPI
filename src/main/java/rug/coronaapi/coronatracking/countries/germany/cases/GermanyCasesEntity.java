@@ -69,7 +69,6 @@ public class GermanyCasesEntity extends Audit {
             return this;
         }
 
-
         public GermanyCasesEntity build() {
             return new GermanyCasesEntity(bundeslandName, recovered, deaths, confirmed, casesUpdatedDate);
         }

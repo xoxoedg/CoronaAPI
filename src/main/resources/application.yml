@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${OPENSHIFT_MYSQL_DB_PORT}/coronatracking
+    username: Corona
+    password: ${OPENSHIFT_MYSQL_DB_PASSWORD}
+    driver-class-name: com.mysql.jdbc.Driver
+
