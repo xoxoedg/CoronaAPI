@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -14,11 +13,11 @@ import java.time.LocalDateTime;
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class BundeslandCases implements Serializable {
-    protected String name;
-    protected Long confirmed;
-    protected Long recovered;
-    protected Long deaths;
+    private String name;
+    private Long confirmed;
+    private Long recovered;
+    private Long deaths;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    protected LocalDateTime updated;
+    private LocalDateTime updated;
 }
 

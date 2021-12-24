@@ -22,7 +22,8 @@ public class GermanyCasesService {
     }
 
     public void saveTodayCases() {
-        if (repository.findByCasesUpdatedDate(LocalDate.now()) == null) {
+
+        if (repository.findByCasesUpdatedDate(LocalDate.now()).size() == 0) {
             Bundeslaender germanyCases = requestService.getGermanyCases();
             repository.saveAll(GermanyApiToEntityConverter.covertAllToEntity(germanyCases));
 

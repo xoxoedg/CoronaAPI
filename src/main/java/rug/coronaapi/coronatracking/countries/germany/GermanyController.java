@@ -30,11 +30,10 @@ public class GermanyController {
         return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
-    @GetMapping("/germany")
+    @GetMapping("/germany/bundesland")
     public ResponseEntity<List<BundeslandCasesDto>> getTodayCasesByBundesland(@RequestParam(name = "name") String bundesland) {
         return new ResponseEntity<List<BundeslandCasesDto>>(casesService.findCaseByBundesland(bundesland), HttpStatus.OK);
     }
-
 
 
 }
