@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -18,6 +19,8 @@ class GermanyCasesRepositoryTest {
 
     @Autowired
     private GermanyCasesRepository germanyCasesRepository;
+    @Autowired
+    private TestEntityManager entityManager;
 
 
     @BeforeEach
@@ -29,7 +32,7 @@ class GermanyCasesRepositoryTest {
                 .confirmed(10L)
                 .recovered(30L)
                 .build();
-        germanyCasesRepository.save(entity);
+        entityManager.persist(entity);
     }
 
 

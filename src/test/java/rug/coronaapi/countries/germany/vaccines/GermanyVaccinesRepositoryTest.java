@@ -51,7 +51,7 @@ class GermanyVaccinesRepositoryTest {
         List<GermanyVaccinesEntity> actualEntity = repository.findByBundeslandName("Sachsen");
         assertNotNull(actualEntity);
         assertEquals(actualEntity.size(), 2);
-        assertEquals(actualEntity.get(1).getFullyVaccinated(), 3000L);
+        assertEquals(actualEntity.get(0).getFullyVaccinated(), 3000L);
     }
 
     @AfterEach

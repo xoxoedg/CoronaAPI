@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class GermanyCasesService {
 
+
     private final GermanyCasesRepository repository;
     private final GermanyCasesRequestService requestService;
 
@@ -19,6 +20,7 @@ public class GermanyCasesService {
         this.repository = repository;
         this.requestService = requestService;
     }
+
 
     public void saveTodayCases() {
 
