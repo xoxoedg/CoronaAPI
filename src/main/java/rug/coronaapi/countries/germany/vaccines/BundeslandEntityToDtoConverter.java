@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BundeslandEntityToDtoConverter {
 
-    public BundeslandVaccineDto convertToDto(GermanyVaccinesEntity entity) {
+    public static BundeslandVaccineDto convertToDto(GermanyVaccinesEntity entity) {
         return new BundeslandVaccineDto.Builder()
                 .name(entity.getBundeslandName())
                 .vaccinated(entity.getFullyVaccinated())
@@ -13,9 +13,10 @@ public class BundeslandEntityToDtoConverter {
                 .build();
     }
 
-    public List<BundeslandVaccineDto> convertAllToDto(List<GermanyVaccinesEntity> vaccinesEntities) {
+    public static List<BundeslandVaccineDto> convertAllToDto(List<GermanyVaccinesEntity> vaccinesEntities) {
         List<BundeslandVaccineDto> bundeslandVaccineDtos = new ArrayList<>();
-        vaccinesEntities.forEach(vaccinesEntity -> bundeslandVaccineDtos.add(convertToDto(vaccinesEntity)));
+        vaccinesEntities.forEach(
+                vaccinesEntity -> bundeslandVaccineDtos.add(convertToDto(vaccinesEntity)));
         return bundeslandVaccineDtos;
     }
 }
