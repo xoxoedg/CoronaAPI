@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import rug.coronaapi.countries.germany.cases.BundeslandCasesDto;
 import rug.coronaapi.countries.germany.cases.GermanyCasesService;
+import rug.coronaapi.countries.germany.vaccines.BundeslandVaccineDto;
+import rug.coronaapi.countries.germany.vaccines.GermanyVaccinesService;
 
 import java.util.List;
 
@@ -17,22 +19,35 @@ import java.util.List;
 public class GermanyController {
 
     private final GermanyCasesService casesService;
+    private final GermanyVaccinesService vaccinesService;
 
     @Autowired
-    public GermanyController(GermanyCasesService casesService) {
+    public GermanyController(GermanyCasesService casesService, GermanyVaccinesService vaccinesService) {
         this.casesService = casesService;
+        this.vaccinesService = vaccinesService;
     }
 
 
-    @GetMapping("/germany")
+    @GetMapping("/germany/cases")
     public ResponseEntity<List<BundeslandCasesDto>> getAllCases() {
         casesService.saveTodayCases(); // probably in the service
         return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
-    @GetMapping("/germany/bundesland")
-    public ResponseEntity<List<BundeslandCasesDto>> getTodayCasesByBundesland(@RequestParam(name = "name") String bundesland) {
+    @GetMapping("/germany/cases/bundesland")
+    public ResponseEntity<List<BundeslandCasesDto>> getCasesByBundesland(@RequestParam(name = "name") String bundesland) {
         return new ResponseEntity<List<BundeslandCasesDto>>(casesService.findCaseByBundesland(bundesland), HttpStatus.OK);
+    }
+
+    @GetMapping("/germany/vaccines")
+    public ResponseEntity<List<BundeslandVaccineDto>> getAllVaccines() {
+        vaccinesService.saveTodayVaccines();
+        return new ResponseEntity<>(vaccinesService.findGermanyVaccinesToday(), HttpStatus.OK);
+    }
+
+    @GetMapping("germany/vaccines/bundesland")
+    public ResponseEntity<List<BundeslandVaccineDto>> getVaccinesByBundesland(@RequestParam(name = "name") String bundesland) {
+        return new ResponseEntity<List<BundeslandVaccineDto>>(vaccinesService.findVaccinesByBundesland(bundesland), HttpStatus.OK);
     }
 
 
