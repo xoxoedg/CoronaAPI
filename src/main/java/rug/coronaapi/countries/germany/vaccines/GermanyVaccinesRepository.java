@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface GermanyVaccinesRepository extends JpaRepository<GermanyVaccinesEntity, Long> {
 
-    List<GermanyVaccinesEntity> findByDate(LocalDate date);
+    List<GermanyVaccinesEntity> findByVaccinesUpdatedDate(LocalDate date);
 
     List<GermanyVaccinesEntity> findByBundeslandName(String name);
 

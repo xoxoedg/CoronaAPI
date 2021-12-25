@@ -27,7 +27,7 @@ public class GermanyVaccinesService {
     }
 
     public List<BundeslandVaccineDto> findGermanyVaccinesToday() {
-        return BundeslandEntityToDtoConverter.convertAllToDto(vaccinesRepository.findByDate(LocalDate.now()));
+        return BundeslandEntityToDtoConverter.convertAllToDto(vaccinesRepository.findByVaccinesUpdatedDate(LocalDate.now()));
     }
 
     public List<BundeslandVaccineDto> findVaccinesByBundesland(String name) {
