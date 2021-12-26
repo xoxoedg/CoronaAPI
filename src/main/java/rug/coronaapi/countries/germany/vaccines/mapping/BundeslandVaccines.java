@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 public abstract class BundeslandVaccines {
     private String name;
     private Long administered;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="dd/MM/yyyy")
     private LocalDateTime updated;
 
 
