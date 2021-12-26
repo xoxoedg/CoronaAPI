@@ -36,11 +36,6 @@ class GermanyCasesRepositoryTest {
     }
 
 
-    @AfterEach
-    void tearDown() {
-        germanyCasesRepository.deleteAll();
-    }
-
     @Test
     void findByCasesUpdatedDate() {
         List<GermanyCasesEntity> actualByCasesUpdatedDate = germanyCasesRepository.findByCasesUpdatedDate(LocalDate.now());
@@ -59,5 +54,10 @@ class GermanyCasesRepositoryTest {
         Optional<GermanyCasesEntity> actualBundesland = germanyCasesRepository.findByCasesUpdatedDateAndBundeslandName(LocalDate.now(), "Bayer");
         assertNotNull(actualBundesland.orElse(null));
 
+    }
+
+    @AfterEach
+    void tearDown() {
+        germanyCasesRepository.deleteAll();
     }
 }
