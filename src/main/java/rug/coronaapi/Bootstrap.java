@@ -3,7 +3,7 @@ package rug.coronaapi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import rug.coronaapi.countries.germany.cases.GermanyCasesService;
+import rug.coronaapi.germany.cases.GermanyCasesService;
 
 @Component
 public class Bootstrap implements CommandLineRunner {
