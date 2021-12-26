@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import rug.coronaapi.countries.germany.cases.BundeslandCasesDto;
 import rug.coronaapi.countries.germany.cases.GermanyCasesService;
-import rug.coronaapi.countries.germany.exception.BundeslandNotFoundException;
 import rug.coronaapi.countries.germany.vaccines.BundeslandVaccineDto;
 import rug.coronaapi.countries.germany.vaccines.GermanyVaccinesService;
 
@@ -31,7 +30,6 @@ public class GermanyController {
 
     @GetMapping("/germany/cases")
     public ResponseEntity<List<BundeslandCasesDto>> getAllCases() {
-        casesService.saveTodayCases(); // probably in the service
         return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
@@ -51,7 +49,6 @@ public class GermanyController {
     public ResponseEntity<List<BundeslandVaccineDto>> getVaccinesByBundesland(@RequestParam(name = "name") String bundesland) {
         return new ResponseEntity<List<BundeslandVaccineDto>>(vaccinesService.findVaccinesByBundesland(bundesland), HttpStatus.OK);
     }
-
 
 
 }
