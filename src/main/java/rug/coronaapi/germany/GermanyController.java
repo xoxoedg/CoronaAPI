@@ -11,6 +11,7 @@ import rug.coronaapi.germany.cases.BundeslandCasesDto;
 import rug.coronaapi.germany.cases.GermanyCasesDto;
 import rug.coronaapi.germany.cases.GermanyCasesService;
 import rug.coronaapi.germany.vaccines.BundeslandVaccineDto;
+import rug.coronaapi.germany.vaccines.GermanyVaccinesDto;
 import rug.coronaapi.germany.vaccines.GermanyVaccinesService;
 
 import java.util.List;
@@ -51,9 +52,14 @@ public class GermanyController {
 
     }
 
-    @GetMapping("germany/vaccines/bundesland")
+    @GetMapping("germany/bundesland/vaccines")
     public ResponseEntity<List<BundeslandVaccineDto>> getVaccinesByBundesland(@RequestParam(name = "name") String bundesland) {
         return new ResponseEntity<List<BundeslandVaccineDto>>(vaccinesService.findVaccinesByBundesland(bundesland), HttpStatus.OK);
+    }
+
+    @GetMapping("germany/vaccines/all")
+    public ResponseEntity<GermanyVaccinesDto> getAllVaccinates() {
+        return new ResponseEntity<>(vaccinesService.findTotalCases(), HttpStatus.OK);
     }
 
 

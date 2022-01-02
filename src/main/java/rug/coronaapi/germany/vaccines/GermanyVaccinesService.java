@@ -34,6 +34,13 @@ public class GermanyVaccinesService {
         return BundeslandEntityToDtoConverter.convertAllToDto(vaccinesRepository.findByBundeslandName(name));
     }
 
+    public GermanyVaccinesDto findTotalCases() {
+        LocalDate date = LocalDate.now();
+        return new GermanyVaccinesDto.Builder()
+                .totalVaccinated(vaccinesRepository.findAllVaccinated(date))
+                .updated(date)
+                .build();
+    }
 
 }
 

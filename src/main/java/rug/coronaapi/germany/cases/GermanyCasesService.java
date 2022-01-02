@@ -45,9 +45,10 @@ public class GermanyCasesService {
     }
 
     public GermanyCasesDto findTotalCases() {
+        LocalDate date = LocalDate.now();
         return new GermanyCasesDto.Builder()
-                .confirmed(repository.findTotalCasesByDate(LocalDate.now()))
-                .updated(LocalDate.now())
+                .confirmed(repository.findTotalCasesByDate(date))
+                .updated(date)
                 .build();
     }
 }
