@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import rug.coronaapi.germany.cases.BundeslandCasesDto;
+import rug.coronaapi.germany.cases.GermanyCasesDto;
 import rug.coronaapi.germany.cases.GermanyCasesService;
 import rug.coronaapi.germany.vaccines.BundeslandVaccineDto;
 import rug.coronaapi.germany.vaccines.GermanyVaccinesService;
@@ -29,11 +30,16 @@ public class GermanyController {
 
 
     @GetMapping("/germany/cases")
-    public ResponseEntity<List<BundeslandCasesDto>> getAllCases() {
+    public ResponseEntity<List<BundeslandCasesDto>> getAllCasesByBundesland() {
         return new ResponseEntity<>(casesService.findGermanyCasesToday(), HttpStatus.OK);
     }
 
-    @GetMapping("/germany/cases/bundesland")
+    @GetMapping("/germany/cases/all")
+    public ResponseEntity<GermanyCasesDto> getAllCases() {
+        return new ResponseEntity<GermanyCasesDto>(casesService.findTotalCases(), HttpStatus.OK);
+    }
+
+    @GetMapping("/germany/bundesland/cases")
     public ResponseEntity<List<BundeslandCasesDto>> getCasesByBundesland(@RequestParam(name = "name") String bundesland) {
         return new ResponseEntity<>(casesService.findCaseByBundesland(bundesland), HttpStatus.OK);
     }

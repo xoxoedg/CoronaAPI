@@ -27,6 +27,7 @@ public class GermanyCasesService {
     public void saveTodayCases() {
 
         if (repository.findByCasesUpdatedDate(LocalDate.now()).size() == 0) {
+            log.info("Loaded Data in Database");
             Bundeslaender germanyCases = requestService.getGermanyCases();
             repository.saveAll(GermanyCasesApiToEntityConverter.covertAllToEntity(germanyCases));
 
@@ -41,5 +42,12 @@ public class GermanyCasesService {
         if (BundeslandValidation.validate(name)) {
             return GermanyEntityToDtoConverter.covertAllToDto(repository.findByBundeslandName(name));
         } else throw new BundeslandNotFoundException("Invalid Bundesland");
+    }
+
+    public GermanyCasesDto findTotalCases() {
+        return new GermanyCasesDto.Builder()
+                .confirmed(repository.findTotalCasesByDate(LocalDate.now()))
+                .updated(LocalDate.now())
+                .build();
     }
 }

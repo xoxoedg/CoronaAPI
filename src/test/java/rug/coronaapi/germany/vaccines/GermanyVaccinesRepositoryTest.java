@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,35 +24,51 @@ class GermanyVaccinesRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        GermanyVaccinesEntity entity = new GermanyVaccinesEntity.Builder()
+        GermanyVaccinesEntity entity1 = new GermanyVaccinesEntity.Builder()
                 .vaccine(1500L)
                 .name("Sachsen")
-                .updated(LocalDate.now())
+                .updated(LocalDate.of(2022, Month.JANUARY, 1))
                 .build();
-        entityManager.persist(entity);
+
+        GermanyVaccinesEntity entity2 = new GermanyVaccinesEntity.Builder()
+                .vaccine(3000L)
+                .name("Sachsen")
+                .updated(LocalDate.of(2022, Month.JANUARY, 2))
+                .build();
+
+        entityManager.persist(entity1);
+        entityManager.persist(entity2);
 
     }
 
     @Test
     void findByDate() {
-        List<GermanyVaccinesEntity> actualEntity = repository.findByVaccinesUpdatedDate(LocalDate.now());
+        List<GermanyVaccinesEntity> actualEntity = repository.findByVaccinesUpdatedDate(LocalDate.of(2022, Month.JANUARY, 1));
         assertNotNull(actualEntity);
-        assertEquals(actualEntity.size(), 1);
+        assertEquals(1, actualEntity.size());
         assertEquals(actualEntity.get(0).getBundeslandName(), "Sachsen");
     }
 
     @Test
     void findByBundeslandName() {
-        GermanyVaccinesEntity entity2 = new GermanyVaccinesEntity.Builder()
-                .vaccine(3000L)
-                .name("Sachsen")
-                .updated(LocalDate.of(2021, 12, 24))
-                .build();
-        entityManager.persist(entity2);
         List<GermanyVaccinesEntity> actualEntity = repository.findByBundeslandName("Sachsen");
         assertNotNull(actualEntity);
         assertEquals(actualEntity.size(), 2);
-        assertEquals(actualEntity.get(0).getFullyVaccinated(), 3000L);
+        assertEquals(1500L, actualEntity.get(0).getFullyVaccinated());
+        assertEquals(3000L, actualEntity.get(1).getFullyVaccinated());
+    }
+
+    @Test
+    void findAllVaccinated() {
+        GermanyVaccinesEntity entity3 = new GermanyVaccinesEntity.Builder()
+                .updated(LocalDate.of(2022, Month.JANUARY, 1))
+                .name("Thüringen")
+                .vaccine(3200L)
+                .build();
+        entityManager.persist(entity3);
+
+        Long expectedSumOfVaccinated = repository.findAllVaccinated(LocalDate.of(2022, Month.JANUARY, 1));
+        assertEquals(4700L, expectedSumOfVaccinated);
     }
 
     @AfterEach

@@ -27,6 +27,7 @@ public class BundeslandVaccineDto {
             this.bundeslandName = bundeslandName;
             return this;
         }
+
         public Builder vaccinated(Long vaccinated) {
             this.vaccinated = vaccinated;
             return this;

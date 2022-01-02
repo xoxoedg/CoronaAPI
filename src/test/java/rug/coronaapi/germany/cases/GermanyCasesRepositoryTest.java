@@ -48,7 +48,7 @@ class GermanyCasesRepositoryTest {
     @Test
     void findByCasesUpdatedDate() {
         List<GermanyCasesEntity> actualByCasesUpdatedDate = germanyCasesRepository.findByCasesUpdatedDate(LocalDate.now());
-        assertEquals(1, actualByCasesUpdatedDate.size());
+        assertEquals(2, actualByCasesUpdatedDate.size());
 
     }
 
